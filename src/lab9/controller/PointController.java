@@ -22,15 +22,18 @@ public class PointController {
     @Autowired
     private PointService pointService;
 
-    @RequestMapping(value = {"/"}, method = RequestMethod.GET)
-    public String getStart() {
-        return "start";
+    @RequestMapping(value = "/", method = RequestMethod.GET)
+    public String getMain(Principal principal, Model model) {
+        List<Point> points = pointService.getByOwner(principal.getName());
+        model.addAttribute("points", points);
+        return "cheburek";
     }
 
-    @RequestMapping(value = "/getPoints", method = RequestMethod.GET)
-    public String getPoints(Model model, Principal principal) {
-        model.addAttribute("points", pointService.getByOwner("sonya"));
-        return "index";
+    @RequestMapping(value = "/getPoints", method = RequestMethod.POST)
+    @ResponseBody
+    public List<Point> getPoints(Principal principal) {
+        List<Point> points = pointService.getByOwner(principal.getName());
+        return points;
     }
 
     @RequestMapping(value = "/newPoint", method = RequestMethod.POST)
@@ -45,14 +48,14 @@ public class PointController {
         point.setY(y);
         point.setR(r);
         point.setEntry(checkPoint(x, y, r));
-        point.setOwner("sonya");
+        point.setOwner(principal.getName());
         return pointService.addPoint(point);
     }
 
     @RequestMapping(value = "/radiusChanged", method = RequestMethod.POST)
     @ResponseBody
     public List<Point> radiusChanged (Principal principal, @RequestParam("r") double r) {
-        List<Point> points = pointService.getByOwner("sonya");
+        List<Point> points = pointService.getByOwner(principal.getName());
 
         for (Point point: points) {
             point.setEntry(checkPoint(point.getX(), point.getY(), r));
@@ -62,11 +65,8 @@ public class PointController {
     }
 
     private boolean checkPoint(double x, double y, double r) {
-        if(x >= 0) {
-            return (y >= 0) ? (x*x + y*y <= (r*r)/4) :
-                    y >= (-r + x)/2;
-        } else {
-            return (y >= 0) && x >= -r/2 && y <= r;
-        }
+        if(x > 0 && x < r && y < r/2 && y > -Math.sqrt(r*r-x*x) || x <= 0 && y > 0 && y < x+r/2)
+            return true;
+        else return false;
     }
 }

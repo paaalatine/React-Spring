@@ -25,7 +25,7 @@
     <orderEntry type="library" exported="" scope="PROVIDED" name="GlassFish 4.0.0" level="application_server_libraries" />
     <orderEntry type="library" exported="" name="Spring-4.3.9.RELEASE" level="project" />
     <orderEntry type="library" exported="" name="Spring MVC-4.3.9.RELEASE" level="project" />
-    <orderEntry type="library" exported="" name="Spring Security-3.2.5" level="project" />
+    <orderEntry type="library" name="Spring Security-3.2.5" level="project" />
     <orderEntry type="library" exported="" name="Spring Web Services-2.0.2" level="project" />
     <orderEntry type="module-library" exported="">
       <library>
@@ -238,6 +238,15 @@
       <library>
         <CLASSES>
           <root url="jar://$MODULE_DIR$/lib/spring-security-web-4.2.3.RELEASE.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/jstl-1.2.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />

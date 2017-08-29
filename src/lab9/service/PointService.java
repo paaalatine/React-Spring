@@ -14,9 +14,7 @@ public class PointService implements IPointService {
     @Autowired
     private PointRepository pointRepository;
 
-    public Point addPoint(Point point) {
-        return pointRepository.saveAndFlush(point);
-    }
+    public Point addPoint(Point point) { return pointRepository.saveAndFlush(point); }
     public List<Point> getByOwner(String owner) {
         return pointRepository.findByOwner(owner);
     }

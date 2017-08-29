@@ -17,6 +17,8 @@ http://www.springframework.org/schema/data/repository
 http://www.springframework.org/schema/data/repository/spring-repository-1.8.xsd">
     <mvc:annotation-driven/>
 
+    <mvc:resources mapping="/resources/**" location="/resources/"/>
+
     <bean name="viewResolver" class="org.springframework.web.servlet.view.BeanNameViewResolver">
         <property name="order" value="2"/>
     </bean>
