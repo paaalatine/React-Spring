@@ -1,4 +1,4 @@
-db : Oracle\n
-back end : Spring\n
-front end : React + Redux\n
+db : Oracle  
+back end : Spring  
+front end : React + Redux  
 REST API
