@@ -23,10 +23,8 @@ public class PointController {
     private PointService pointService;
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
-    public String getMain(Principal principal, Model model) {
-        List<Point> points = pointService.getByOwner(principal.getName());
-        model.addAttribute("points", points);
-        return "cheburek";
+    public String getMain() {
+        return "main";
     }
 
     @RequestMapping(value = "/getPoints", method = RequestMethod.POST)

@@ -7,8 +7,6 @@ import ReactDOM from 'react-dom';
 
 export default class Canvas extends React.Component {
 
-    rect;
-
     constructor() {
         super();
         this.setNew = this.setNew.bind(this);
@@ -17,31 +15,32 @@ export default class Canvas extends React.Component {
 
     }
     setNew(e) {
-        let w = parseInt(this.props.width);
-        let h = parseInt(this.props.height);
+        const w = canvas.clientWidth;
+        const h = canvas.clientHeight;
         let rect = ReactDOM.findDOMNode(this.refs.cc).getBoundingClientRect();
         let x = (e.clientX - w/2 - rect.left)*14/w;
         let y = (-e.clientY + h/2 + rect.top)*14/w;
-        console.log(x,y);
-        this.props.newPoint(x, y, this.props.r);
+        this.props.newPoint(x.toFixed(2), y.toFixed(2), this.props.r);
     }
 
     drawPoints() {
         let canvas = document.getElementById(this.props.id);
         let context = canvas.getContext("2d");
-        let w = parseInt(this.props.width);
-        let h = parseInt(this.props.height);
+        const w = canvas.width;
+        const h = canvas.height;
         for(let i in this.props.points){
             let x = this.props.points[i].x * w/14 + w/2;
             let y = -this.props.points[i].y * w/14 + h/2;
             context.beginPath();
+            context.strokeStyle="#000000";
             if(this.props.points[i].entry){
-                context.fillStyle = "#00a204";
+                context.fillStyle = "#f8f7b5";
             } else {
-                context.fillStyle = "#981712";
+                context.fillStyle = "#444444";
             }
             context.arc(x, y, 3, 0, 2*Math.PI, false);
             context.closePath();
+            context.stroke();
             context.fill();
         }
     }
@@ -49,11 +48,12 @@ export default class Canvas extends React.Component {
     drawFigure() {
         let canvas = document.getElementById(this.props.id);
         let context = canvas.getContext("2d");
-        let w = parseInt(this.props.width);
-        let h = parseInt(this.props.height);
+        const w = canvas.width;
+        const h = canvas.height;
         let r = this.props.r*w/14;
+        console.log(h, w, r);
         context.clearRect(0,0,w,h);
-        context.fillStyle = '#ccffc3';
+        context.fillStyle = '#ff8987';
         context.strokeStyle = '#000000';
         context.fillRect( w/2, h/2, r, -r/2 );
         context.strokeRect( w/2, h/2, r, -r/2 );
@@ -92,6 +92,9 @@ export default class Canvas extends React.Component {
     }
 
     componentDidMount() {
+        let canvas = document.getElementById("canv");
+        canvas.style.width ='100%';
+        canvas.height=canvas.clientWidth;
         document.getElementById(this.props.id).addEventListener('click', this.setNew);
         this.drawFigure();
     }
@@ -107,7 +110,7 @@ export default class Canvas extends React.Component {
 
     render() {
         return(
-            <canvas ref="cc" width={ this.props.width } height={ this.props.height } id={ this.props.id }></canvas>
+            <canvas ref="cc" id={ this.props.id } width="500px" height="500px"></canvas>
         );
     }
 }
@@ -116,7 +119,5 @@ Canvas.propTypes = {
     r: React.PropTypes.number.isRequired,
     points: React.PropTypes.array.isRequired,
     newPoint: React.PropTypes.func.isRequired,
-    width: React.PropTypes.string.isRequired,
-    height: React.PropTypes.string.isRequired,
     id: React.PropTypes.string.isRequired
 }

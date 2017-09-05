@@ -1,0 +1,337 @@
+@media (min-width: 1184px) {
+    html {
+        background-color: #e4e6d8;
+    }
+    #bar {
+        display: inline-block;
+        width: 1000px;
+        height: 50px;
+        background-color: #444444;
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: bold;
+        border: 1px solid black;
+    }
+
+    #user {
+        margin-left: 4%;
+        margin-top: 15px;
+        display: inline-block;
+    }
+
+    #main {
+        background-color: white;
+        width: 1000px;
+        margin: auto;
+        height: 500px;
+    }
+
+    #exitbut {
+        height: 100%;
+        float: right;
+        width: 8%;
+        background-color: rgba(68, 68, 68, 0.96);
+        border-left: 1px solid #c5c5c5;
+        border-right: none;
+        border-bottom: none;
+        border-top: none;
+        color: #ffffff;
+        text-align: center;
+        text-decoration: none;
+        font-size: 15px;
+        font-weight: bold;
+    }
+
+    #exitbut:active {
+        box-shadow: inset 3px 3px 10px 1px rgba(32, 32, 32, 0.64);
+    }
+
+    #exitbut,
+    #exitbut:active,
+    #exitbut:focus {
+        outline: none;
+    }
+
+    tbody {
+        display: block;
+        height: 285px;
+        overflow: auto;
+        font-size: 12px;
+    }
+
+    thead, tbody tr {
+        display: table;
+        width: 99%;
+        table-layout: fixed;
+    }
+
+    thead {
+        width: calc(99% - 1em + 1px);
+        font-weight: bold;
+    }
+
+    table, tr td {
+        border-collapse: collapse;
+        margin: auto;
+    }
+
+    tr td {
+        border-collapse: collapse;
+        border: 1px solid black;
+    }
+
+    #table {
+        background-color: white;
+        width: 92%;
+        margin-top: 5px;
+    }
+
+    #canvas {
+        background-color: white;
+        width: 50%;
+        height: 100%;
+        border: 1px solid black;
+        display: inline-block;
+    }
+
+    #tableinputs {
+        background-color: white;
+        position: absolute;
+        width: 498px;
+        display: inline-block;
+        height: 500px;
+        border: 1px solid black;
+    }
+
+    #page {
+        width: 100%;
+        height: 100%;
+    }
+
+    #tablediv {
+        margin: auto;
+        height: 300px;
+    }
+
+    #inputsdiv {
+        margin: auto;
+        height: 200px;
+    }
+}
+
+@media (min-width: 764px) and (max-width: 1184px) {
+    #bar {
+        display: inline-block;
+        width: 764px;
+        height: 50px;
+        background-color: #444444;
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: bold;
+        border: 1px solid black;
+    }
+
+    #user {
+        margin-left: 4%;
+        margin-top: 15px;
+        display: inline-block;
+    }
+
+    #main {
+        width: 764px;
+        margin: auto;
+        height: 382px;
+    }
+
+    #exitbut {
+        height: 100%;
+        float: right;
+        width: 8%;
+        background-color: rgba(68, 68, 68, 0.96);
+        border-left: 1px solid #c5c5c5;
+        border-right: none;
+        border-bottom: none;
+        border-top: none;
+        color: #ffffff;
+        text-align: center;
+        text-decoration: none;
+        font-size: 15px;
+        font-weight: bold;
+    }
+
+    #exitbut:active {
+        box-shadow: inset 3px 3px 10px 1px rgba(32, 32, 32, 0.64);
+    }
+
+    #exitbut,
+    #exitbut:active,
+    #exitbut:focus {
+        outline: none;
+    }
+
+    tbody {
+        display: block;
+        height: 200px;
+        overflow: auto;
+    }
+
+    thead, tbody tr {
+        display: table;
+        width: 100%;
+        table-layout: fixed;
+    }
+
+    thead {
+        width: calc(100% - 1em);
+    }
+
+    table, tr td {
+        margin: auto;
+        border: 1px solid #0d0d0d;
+    }
+
+    #table {
+        width: 90%;
+    }
+
+    #canvas {
+        width: 50%;
+        height: 100%;
+        border: 1px solid black;
+        display: inline-block;
+    }
+
+    #tableinputs {
+        position: absolute;
+        width: 380px;
+        display: inline-block;
+        height: 382px;
+        border: 1px solid black;
+    }
+
+    #page {
+        width: 100%;
+        height: 100%;
+    }
+
+    #tablediv {
+        margin: auto;
+        height: 220px;
+    }
+
+    #inputsdiv {
+        margin: auto;
+        height: 162px;
+    }
+}
+
+@media (max-width: 764px) {
+    #bar {
+        display: inline-block;
+        width: 100%;
+        height: 50px;
+        background-color: #444444;
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: bold;
+        border: 1px solid black;
+    }
+
+    #user {
+        margin-left: 4%;
+        margin-top: 15px;
+        display: inline-block;
+    }
+
+    #main {
+        width: 100%;
+        margin: auto;
+    }
+
+    #exitbut {
+        height: 100%;
+        float: right;
+        width: 70px;
+        background-color: rgba(68, 68, 68, 0.96);
+        border-left: 1px solid #c5c5c5;
+        border-right: none;
+        border-bottom: none;
+        border-top: none;
+        color: #ffffff;
+        text-align: center;
+        text-decoration: none;
+        font-size: 15px;
+        font-weight: bold;
+    }
+
+    #exitbut:active {
+        box-shadow: inset 3px 3px 10px 1px rgba(32, 32, 32, 0.64);
+    }
+
+    #exitbut,
+    #exitbut:active,
+    #exitbut:focus {
+        outline: none;
+    }
+
+    tbody {
+        display: block;
+        height: 300px;
+        overflow: auto;
+    }
+
+    thead, tbody tr {
+        display: table;
+        width: 100%;
+        table-layout: fixed;
+    }
+
+    thead {
+        width: calc(100% - 1em);
+    }
+
+    #mainraw {
+        background-color: #f40d07;
+    }
+
+    table, tr td {
+        margin: auto;
+        border: 1px solid #0d0d0d;
+    }
+
+    #table {
+        width: 90%;
+    }
+
+    #canvas {
+        width: 100%;
+        height: 0;
+        background-size:100%;
+        padding-bottom: 100%;
+        border: 1px solid black;
+    }
+
+    #tableinputs {
+        position: absolute;
+        width: 100%;
+        border: 1px solid black;
+    }
+
+    #page {
+        width: 100%;
+        height: 100%;
+    }
+
+    #tablediv {
+        margin: auto;
+        height: 350px;
+    }
+
+    #inputsdiv {
+        margin: auto;
+        height: 200px;
+    }
+}

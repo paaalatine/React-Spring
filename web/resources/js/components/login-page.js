@@ -16,6 +16,8 @@ class LoginPage extends React.Component {
     }
 
     onLogBtnClick() {
+        $('#err').html('');
+        $('#err').removeClass('error');
         this.setState({form: <LoginForm/>, isChecked: true});
     }
     onRegBtnClick() {

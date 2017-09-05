@@ -1,6 +1,10 @@
+html {
+    background-color: #e4e6d8;
+}
+
 .pushed {
-    background-color: #808080;
-    border: none;
+    background-color: rgba(94, 94, 94, 0.96);
+    border: 1px solid #373737;
     color: #ffffff;
     width: 50%;
     height: 15%;
@@ -9,19 +13,19 @@
     display: inline-block;
     font-size: 15px;
     font-weight: bold;
-    box-shadow: inset 0px 0px 10px 1px rgba(0,0,0,0.39);
+    box-shadow: inset 3px 3px 10px 1px rgba(13, 13, 13, 0.64);
 }
 
 #left {
-    border-radius: 12px 0 0 0;
+    border-radius: 2px 0 0 0;
 }
 
 #right {
-    border-radius: 0 12px 0 0;
+    border-radius: 0 2px 0 0;
 }
 .unpushed {
-    background-color: #808080;
-    border: none;
+    background-color: #5e5e5e;
+    border: 1px solid #373737;
     color: white;
     height: 15%;
     width: 50%;
@@ -30,10 +34,6 @@
     display: inline-block;
     font-weight: bold;
     font-size: 15px;
-}
-
-.unpushed:hover, .pushed:hover {
-    background-color: #777777;
 }
 
 .unpushed,
@@ -49,16 +49,17 @@
     text-align: center;
     margin:auto;
     width: 25%;
-    height: 100%;
+    height: 80%;
 }
 
 #login-page{
+    background-color: white;
     width: 100%;
-    height: 35%;
+    height: 43%;
     margin-top: 40%;
     text-align: center;
-    border: 2px solid #454545;
-    border-radius: 15px;
+    border: 1px solid #656565;
+    border-radius: 5px;
 }
 
 .forms {
@@ -82,7 +83,7 @@
 
 
 .sub {
-    background-color: #ebccd1;
+    background-color: rgb(64, 77, 92);
     width: 100%;
     height: 30px;
     margin-top: 5%;
@@ -91,22 +92,33 @@
     font-weight: bold;
     font-size: 15px;
     color: white;
+    border: 1px solid #3b4653;
     border-radius: 3px;
+    box-shadow: inset 2px 3px 6px 0px rgba(177, 183, 206, 0.65);
 }
 
 .sub:active {
-    background-color: #ebccd1;
-    box-shadow: inset 0px 0px 10px 1px rgba(0, 0, 0, 0.22);
+    background-color: #3b4653;
+    box-shadow: inset 0px 0px 10px 1px rgba(29, 38, 50, 0.71);
     outline: none;
 }
+
 
 .error {
     width: 100%;
     height: 4%;
+    font-size: 14px;
+    color: rgba(58, 11, 13, 0.8);
     margin-top: 12%;
     text-align: center;
-    padding-top: 3%;
-    border: 1px solid #ababab;
-    border-radius: 10px;
-    background-color: #ffeee7;
+    padding-top: 2%;
+    border: 1px solid #b9b9b9;
+    border-radius: 5px;
+    background-color: rgba(255, 238, 226, 0.74);
+}
+
+#owl{
+    position: absolute;
+    right: 0;
+    bottom: 35px;
 }

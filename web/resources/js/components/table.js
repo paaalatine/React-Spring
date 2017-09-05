@@ -18,14 +18,20 @@ export default class Table extends React.Component {
             )
         });
 
-        return <div>
-            {
-                <table>
+        return(
+                <table id="table">
+                    <thead>
+                        <tr id="mainraw">
+                            <td>X</td>
+                            <td>Y</td>
+                            <td>R</td>
+                            <td>Entry</td>
+                        </tr>
+                    </thead>
                     <tbody>
                         {tableRows}
                     </tbody>
                 </table>
-            }
-        </div>
+    )
     }
 }

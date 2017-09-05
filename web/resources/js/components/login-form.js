@@ -4,35 +4,28 @@ import $ from 'jquery'
 
 export default class LoginForm extends React.Component {
 
-    constructor() {
-        super();
-        this.state = {
-            isEmptyU: false,
-            isEmptyP: false
-        };
-    }
-
     log(){
-        let user = document.getElementById("username").value;
-        let pass = document.getElementById("password").value;
-        if(user==''){
+        let user = $("#username").val();
+        let pass = $("#password").val();
+        let re = /\w+/;
+        if(!re.test(user)){
             var $el = $("#username"),
                 originalColor = $el.css("background");
 
             $el.css("background", "#ffefed");
             setTimeout(function(){
                 $el.css("background", originalColor);
-            }, 500);
+            }, 800);
             return;
         }
-        if(pass==''){
+        if(!re.test(pass)){
             var $el = $("#password"),
                 originalColor = $el.css("background");
 
             $el.css("background", "#ffefed");
             setTimeout(function(){
                 $el.css("background", originalColor);
-            }, 500);
+            }, 800);
             return;
         }
         $.ajax({

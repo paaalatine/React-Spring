@@ -10,17 +10,16 @@ import * as pageActions from '../actions/page-actions'
 
 class Main extends React.Component {
     render() {
-        const { user, page } = this.props
+        const { page } = this.props
         const { newR, newPoint } = this.props.pageActions
-        return <div>
-            <User name={user.name} />
+        return <div id="main">
+            <User />
             <Page pointsForT={page.pointsForT} pointsForC={page.pointsForC} r={page.r} newR={newR} newPoint={newPoint}/>
         </div>
     }
 }
 function mapStateToProps (state) {
     return {
-        user: state.user,
         page: state.page
     }
 }

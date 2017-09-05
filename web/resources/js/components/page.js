@@ -22,34 +22,42 @@ export default class Page extends React.Component {
     render() {
         const { r, pointsForT, pointsForC, newPoint } = this.props
 
-        return <div>
-            <Canvas r={r} points={pointsForC} newPoint={newPoint} width="500px" height="500px" id="canv"/>
-            <p>
-                select r
-                <button onClick={this.onRBtnClick.bind(this)}>2</button>
-                <button onClick={this.onRBtnClick.bind(this)}>3</button>
-                <button onClick={this.onRBtnClick.bind(this)}>4</button>
-            </p>
-            <p>
-                select x
-                <TextField id='x'/>
-            </p>
-            <p>
-                select y
-                <TextField id='y'/>
-            </p>
-            <p>
-                <button onClick={this.onAddBtnClick.bind(this)}>add</button>
-            </p>
-
-            <Table points={pointsForT}/>
+        return <div id="page">
+            <div id="canvas">
+                        <Canvas r={r} points={pointsForC} newPoint={newPoint} id="canv"/>
+            </div>
+            <div id="tableinputs">
+                <div id="tablediv">
+                    <Table points={pointsForT}/>
+                </div>
+                <div id="inputsdiv">
+                    <p>
+                        select r
+                        <button onClick={this.onRBtnClick.bind(this)}>2</button>
+                        <button onClick={this.onRBtnClick.bind(this)}>3</button>
+                        <button onClick={this.onRBtnClick.bind(this)}>4</button>
+                    </p>
+                    <p>
+                        select x
+                        <TextField id='x'/>
+                    </p>
+                    <p>
+                        select y
+                        <TextField id='y'/>
+                    </p>
+                    <p>
+                        <button onClick={this.onAddBtnClick.bind(this)}>add</button>
+                    </p>
+                </div>
+            </div>
         </div>
     }
 }
+
 Page.propTypes = {
-    r: React.PropTypes.number.isRequired,
-    pointsForT: React.PropTypes.array.isRequired,
-    pointsForC: React.PropTypes.array.isRequired,
-    newR: React.PropTypes.func.isRequired,
-    newPoint: React.PropTypes.func.isRequired
-}
+            r: React.PropTypes.number.isRequired,
+            pointsForT: React.PropTypes.array.isRequired,
+            pointsForC: React.PropTypes.array.isRequired,
+            newR: React.PropTypes.func.isRequired,
+            newPoint: React.PropTypes.func.isRequired
+        }
