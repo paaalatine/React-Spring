@@ -3,7 +3,7 @@
  */
 import $ from 'jquery'
 
-function getPoints(r) {
+function getPointsWithR(r) {
     var points = [];
     $.ajax({
         type: 'POST',
@@ -36,7 +36,7 @@ function getNewPoint(x, y, r) {
 export function newR(r) {
     return {
             type: 'GET_WITH_NEW_R',
-            payload1: getPoints(r),
+            payload1: getPointsWithR(r),
             payload2: r
     }
 }

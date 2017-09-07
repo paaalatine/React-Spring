@@ -33,8 +33,8 @@ class LoginPage extends React.Component {
         return (
             <div>
                 <div id="login-page">
-                    <input type="button" className = {btn1} id="left" value="Sing in" onClick={this.onLogBtnClick.bind(this)}/>
-                    <input type="button" className = {btn2} id="right" value="Sing up" onClick={this.onRegBtnClick.bind(this)}/>
+                    <input type="button" className = {btn1} id="left" value="Sign in" onClick={this.onLogBtnClick.bind(this)}/>
+                    <input type="button" className = {btn2} id="right" value="Sign up" onClick={this.onRegBtnClick.bind(this)}/>
                     {display}
                 </div>
                 <div id="err"/>

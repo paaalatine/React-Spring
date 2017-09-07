@@ -65,7 +65,7 @@ export default class LoginForm extends React.Component {
                                 </td>
                             </tr>
                             <tr>
-                                <td><input type="button" className="sub"  value="Sing in" onClick={this.log.bind(this)} /></td>
+                                <td><input type="button" className="sub"  value="Sign in" onClick={this.log.bind(this)} /></td>
                             </tr>
                         </tbody>
                     </table>

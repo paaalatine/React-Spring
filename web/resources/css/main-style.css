@@ -14,6 +14,18 @@
         border: 1px solid black;
     }
 
+    #add {
+        width: 150px;
+        height: 30px;
+        text-decoration: none;
+        background-color: #8bf8c3;
+        color: white;
+        text-align: center;
+        border-radius: 10px;
+        font-weight: bold;
+        border: 2px solid black;
+    }
+
     #user {
         margin-left: 4%;
         margin-top: 15px;
@@ -56,7 +68,7 @@
     tbody {
         display: block;
         height: 285px;
-        overflow: auto;
+        overflow-y: scroll;
         font-size: 12px;
     }
 
@@ -115,6 +127,8 @@
     }
 
     #inputsdiv {
+        text-align: center;
+        width: 50%;
         margin: auto;
         height: 200px;
     }

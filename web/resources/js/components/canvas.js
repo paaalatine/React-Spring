@@ -97,6 +97,7 @@ export default class Canvas extends React.Component {
         canvas.height=canvas.clientWidth;
         document.getElementById(this.props.id).addEventListener('click', this.setNew);
         this.drawFigure();
+        this.drawPoints();
     }
 
     componentDidUpdate(){

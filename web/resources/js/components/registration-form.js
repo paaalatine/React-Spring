@@ -77,7 +77,7 @@ export default class RegistrationForm extends React.Component {
                             </td>
                         </tr>
                         <tr>
-                            <td><input className="sub" type="button" onClick={this.reg.bind(this)} value="Sing up" /></td>
+                            <td><input className="sub" type="button" onClick={this.reg.bind(this)} value="Sign up" /></td>
                         </tr>
                         </tbody>
                     </table>

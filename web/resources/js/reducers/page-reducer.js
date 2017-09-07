@@ -4,10 +4,24 @@
 
 import $ from 'jquery'
 
+function getPointsWithR(r) {
+    var points = [];
+    $.ajax({
+        type: 'POST',
+        url: "/sonya9_war_exploded/radiusChanged",
+        data: { r : r },
+        async: false
+    }).done(function (data) {
+        points = data;
+    });
+    return points;
+}
+
+
 const initialState = {
     r: 1,
     pointsForT: getPoints(),
-    pointsForC: []
+    pointsForC: getPointsWithR(1)
 }
 
 function getPoints() {

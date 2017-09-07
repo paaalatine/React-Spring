@@ -14,7 +14,7 @@ export default class TextField extends React.Component {
 
     render() {
         return (
-            <input type={this.props.type} className={this.props.className} name={this.props.name} id={this.props.id} value={this.state.value} onChange={this.handleChange} />
+            <input type={this.props.type} autoComplete="off" className={this.props.className} name={this.props.name} id={this.props.id} value={this.state.value} onChange={this.handleChange} />
         );
     }
 }
